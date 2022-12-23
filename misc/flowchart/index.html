@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GURPS Battle Flow Chart</title>
+<link href="wrhett.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 align="center">GURPS Battle Flow Chart</h1>
+<ul>
+  <li><a href="#BeginBattle">Begin Battle</a></li>
+  <li><a href="#Maneuvers">Maneuvers</a></li>
+  <ul>
+    <li><img src="images/gameaid/maneuvers/man-nothing.png" width=20 height=20 hspace=5 /><a href="#DoNothing">Do Nothing</a></li>
+    <li><img src="images/gameaid/maneuvers/man-move.png" width=20 height=20 hspace=5 /><a href="#Move">Move</a></li>
+    <li><img src="images/gameaid/maneuvers/man-change-posture.png" width=20 height=20 hspace=5 /><a href="#ChangePosture">Change Posture</a></li>
+    <li><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 /><a href="#Aim">Aim</a></li>
+    <li><img src="images/gameaid/maneuvers/man-evaluate.png" width=20 height=20 hspace=5 /><a href="#Evaluate">Evaluate</a></li>
+    <li><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 /><a href="#Attack">Attack</a></li>
+    <li><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 /><a href="#Feint">Feint</a></li>
+    <li><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 /><a href="#AllOutAttack">All-Out Attack</a>
+      <ul>
+        <li><img src="images/gameaid/maneuvers/man-aoa-determined.png" width=20 height=20 hspace=5 /><a href="#AllOutAttackDetermined">All-Out Attack (determined)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-aoa-double.png" width=20 height=20 hspace=5 /><a href="#AllOutAttackDouble">All-Out Attack (double)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-aoa-feint.png" width=20 height=20 hspace=5 /><a href="#AllOutAttackFeint">All-Out Attack (feint)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-aoa-strong.png" width=20 height=20 hspace=5 /><a href="#AllOutAttackStrong">All-Out Attack (strong)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-aoa-suppress.png" width=20 height=20 hspace=5 /><a href="#AllOutAttackSuppress">All-Out Attack (suppression fire)</a></li>
+      </ul>
+    </li>
+    <li><img src="images/gameaid/maneuvers/man-move-attack.png" width=20 height=20 hspace=5 /><a href="#MoveAttack">Move and Attack</a></li>
+    <li><img src="images/gameaid/maneuvers/man-defense.png" width=20 height=20 hspace=5 /><a href="#AllOutDefense">All-Out Defense</a>
+      <ul>
+        <li><img src="images/gameaid/maneuvers/man-def-block.png" width=20 height=20 hspace=5 /><a href="#AllOutDefenseBlock">All-Out Defense (increased block)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-def-parry.png" width=20 height=20 hspace=5 /><a href="#AllOutDefenseParry">All-Out Defense (increased parry)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-def-dodge.png" width=20 height=20 hspace=5 /><a href="#AllOutDefenseDodge">All-Out Defense (increased dodge)</a></li>
+        <li><img src="images/gameaid/maneuvers/man-def-double.png" width=20 height=20 hspace=5 /><a href="#AllOutDefenseDouble">All-Out Defense (double defense)</a></li>
+      </ul>
+    </li>
+    <li><img src="images/gameaid/maneuvers/man-concentrate.png" width=20 height=20 hspace=5 /><a href="#Concentrate">Concentrate</a></li>
+    <li><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 /><a href="#Ready">Ready</a></li>
+    <li><img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 /><a href="#Wait">Wait</a></li>
+  </ul>
+  <li><a href="#Conditions">Conditions</a>
+    <ul>
+      <li><a href="#Postures">Postures</a>
+        <ul>
+          <li><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 /><a href="#PostureLyingProne">Lying Prone</a></li>
+          <li><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 /><a href="#PostureKneel">Kneeling</a></li>
+          <li><img src="images/gameaid/statuses/condition-crouch.webp" width=20 height=20 hspace=5 /><a href="#PostureCrouch">Crouching</a></li>
+          <li><img src="images/gameaid/statuses/condition-sit.webp" width=20 height=20 hspace=5 /><a href="#PostureSit">Sitting</a></li>
+          <li><img src="images/gameaid/statuses/condition-crawl.webp" width=20 height=20 hspace=5 /><a href="#PostureCrawl">Crawling</a></li>
+        </ul>
+      </li>
+      <li><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 /><a href="#Grappled">Grappled</a></li>
+      <li><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 /><a href="#Stun">Stunned</a></li>
+      <li><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 /><a href="#MentalStun">Mentally Stunned</a></li>
+      <li><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /><a href="#Shock">Shocked</a></li>
+      <li><img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a href="#Reeling">Reeling</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2><a name="BeginBattle">BeginBattle</a></h2>
+<ol>
+  <li>Left-click and drag a box to select all combatants</li>
+  <li>Right-click on one combatant and toggle combat state</li>
+  <li>Switch to the combat tab</li>
+  <li>Click "Roll All" to determine combat order.  Those with highest basic speed go first [BX363].  In the case of a tie, the character with the highest DX can go first [BX363].  If there is still a tie, GM can choose (GURPS game aid uses 1d6).</li>
+  <li>Click "Begin Combat" (at the bottom)</li>
+</ol>
+<p class="style1"></p>
+
+<h2><a name="Maneuvers">Maneuvers</a></h2>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-nothing.png" width=20 height=20 hspace=5 /><a name="DoNothing">Do Nothing</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-move.png" width=20 height=20 hspace=5 /><a name="Move">Move</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-change-posture.png" width=20 height=20 hspace=5 /><a name="ChangePosture">Change Posture</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 /><a name="Aim">Aim</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-evaluate.png" width=20 height=20 hspace=5 /><a name="Evaluate">Evaluate</a></h3>
+<p class="style1"></p>
+
+<h3><a name="Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a></h3>
+
+<ol>
+  <li><b>Check if attack is successful</b>
+    <ol>
+      <li>If weapon is not ready
+        <ol>
+          <li>If Fast-Draw Skill [B194] exists, click on RSL button in Character Sheet and check chat window for result.  On success, proceed with attack.</li>
+          <li>On failure or if no Fast-Draw Skill exists, spend this turn executing <a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready maneuver</a> and attack next turn.</li>
+        </ol>
+      </li>
+      <li>If ranged attack
+        <ol>
+          <li>If aiming on previous turns
+            <ol>
+              <li>If choosing new target, discard aiming modifier</li>
+              <li>Otherwise, click on bucket and add recorded aiming modifier</li>
+            </ol>
+          </li>
+          <li>Add range modifier to bucket: Ctrl-click-drag a line to the target, then click on target.</li>
+        </ol>
+      </li>
+      <li>Perform the attack.  Click on Level button in Weapon table in Character Sheet and check chat window for result.</li>
+      <li>If attack is successful, move to next step.  Otherwise, turn ends.</li>
+    </ol>
+  </li>
+  <li><b>Check if defense is successful</b>
+    <ol>
+      <li>No active defense is possible if the defender is unaware of the attack, unconscious, immobilized, or otherwise unable to react [BX374].  In this case, assume defense fails and move to next step (calculate damage).</li>
+      <li>Select the combatant and open the modifier bucket dialog.  Click on all buttons in the "Current Effects" section that are related to active defenses.</li>
+      <li>If defender's last maneuver was All-Out Defense (increased defense for <a href="#AllOutDefenseBlock"><img src="images/gameaid/maneuvers/man-def-block.png" width=20 height=20 hspace=5 />block</a>, <a href="#AllOutDefenseParry"><img src="images/gameaid/maneuvers/man-def-parry.png" width=20 height=20 hspace=5 /> parry</a>, or <a href="#AllOutDefenseDodge"><img src="images/gameaid/maneuvers/man-def-dodge.png" width=20 height=20 hspace=5 /> dodge)</a> [BX366], and defending with the method chosen at the time of the maneuver, then apply the bonus to the bucket (may do this when defending against every attack this turn).</li>
+      <li>If blocking
+        <ol>
+          <li>Any ready object (shield, cloak, or other large object, including another character) may be used to block [BX375].  If object is not ready, defender cannot use this defense and must spend a turn executing <a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready maneuver</a> to use this defense on future turns.</li>
+          <li>You can block any melee attack, thrown weapon, projected liquid, or muscle-powered missile weapon. You cannot block bullets or beam weapons (too fast) [BX375].</li>
+          <li>click on Block button in Melee Weapon table in Character sheet and check chat window for result</li>
+        </ol>
+      </li>
+      <li>If parrying
+        <ol>
+          <li>The defender can parry melee attacks or thrown weapons.  Other ranged weapons can be parried only if the attacker is within reach of the defender's melee weapon [BX376].
+            <ul>
+              <li>Thrown weapons larger than 1 <i>lb.</i> (<i>e.g.</i> spears) are parried with a -1 penalty [BX376] (add this to the bucket)</li>
+              <li>Thrown weapons smaller than 1 <i>lb.</i> (<i>e.g.</i> knives, shuriken) are parried with a -2 penalty [BX376] (add this to the bucket)</li>
+            </ul>
+          </li>
+          <li>Each successive parry this turn carries a cumulative penalty (add this to the bucket):
+            <ul>
+              <li>-4 Normally</li>
+              <li>-2 with either the <i>Trained by a Master [B93]</i> or <i>Weapon Master [B99]</i> advantage</li>
+              <li>-1 with both of these advantages</li>
+            </ul>
+          </li>
+          <li>click on Parry button in Melee Weapon table in Character sheet and check chat window for result</li>
+          <li>If an unarmed attack was successfully parried, the defender gets a free attack on the attacker.  Immediately roll for attack (-4 penalty if attacker used <i>Judo or Karate [B203]</i>) and damage.  There is no defense. [BX376]</li>
+        </ol>
+      </li>
+      <li>If dodging
+        <ol>
+          <li>Dodge may be used to defend against any attack [BX374]</li>
+          <li>click on Dodge button in Encumberance, Move, and Dodge table in Character sheet and check chat window for result</li>
+        </ol>
+      </li>
+
+      <li>If the defender's last maneuver was <a href="#AllOutDefenseDouble"><img src="images/gameaid/maneuvers/man-def-double.png" width=20 height=20 hspace=5 />All-Out Defense (double defense)</a> [BX366], and if the previous defense was unsuccessful, the defender may try to defend a second time with a different ready active defense (may do this when defending against every attack this turn).</li>
+    </ol>
+  </li>
+  <li><b>Calculate damage and update defender status</b>
+    <ol>
+      <li>Right-click on defender and toggle target status on.</li>
+      <li>Click on the box to the right of "Roll damage" in the chat message that showed the attack was successful</li>
+      <li>Click "Apply All to..." button in the chat message showing the damage roll.  The targeted unit should be the unit listed.
+        <ul>
+          <li>All modifiers (damage reduction, wound modifiers, and armor divisors) should be calculated automatically</li>
+          <li>If penetrating damage is greater than zero, then "Shock" will appear under "Calculation and Results".  Click on the chat box icon next to "Shock", then click on button in the chat message (must do both). Should see the defender's <a href="#Shock">shock status modifier <img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 />, or <img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /></a> set, depending on the amount shown.</li>
+          <li>If penetrating damage is greater than half of total HP, then "Major Wound" will appear under "Calculation and Results".  Click on the chat box icon next to "Major Wound", then click on button in the chat message to roll to avoid Stun/Knockdown.  If unsuccessful, then the <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a> and <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Prone</a> statuses will be set.</li>
+          <li>Click "Apply (Quietly)" in the Apply Damage Dialog.  Should see the HP (or FP) value decreased in the defender's status.</li>
+          <li>Toggle the <img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a href="#Reeling">Reeling</a> status indicator if the combatant's HP has been reduced to 1/3 of its full value.  You should see the Reeling label in the Hit Points table of the combatant's character sheet, but no modifiers will be applied (and it will not pulse) unless you toggle the status indicator.</li>
+        </ul>
+      </li>
+      <li>Right-click on defender and toggle target status off (otherwise next attack will be applied to the same defender).</li>
+    </ol>
+
+  </li>
+  
+</ol>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 /><a name="Feint">Feint</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-move-attack.png" width=20 height=20 hspace=5 /><a name="AllOutAttack">All-Out Attack</a></h3>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-aoa-determined.png" width=20 height=20 hspace=5 /><a name="AllOutAttackDetermined">All-Out Attack (determined)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-aoa-double.png" width=20 height=20 hspace=5 /><a name="AllOutAttackDouble">All-Out Attack (double)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-aoa-feint.png" width=20 height=20 hspace=5 /><a name="AllOutAttackFeint">All-Out Attack (feint)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-aoa-strong.png" width=20 height=20 hspace=5 /><a name="AllOutAttackStrong">All-Out Attack (strong)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-aoa-suppress.png" width=20 height=20 hspace=5 /><a name="AllOutAttackSuppress">All-Out Attack (suppression fire)</a></h4>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-move-attack.png" width=20 height=20 hspace=5 /><a name="MoveAttack">Move and Attack</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-defense.png" width=20 height=20 hspace=5 /><a name="AllOutDefense">All-Out Defense</a></h3>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-def-block.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseBlock">All-Out Defense (increased block)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-def-parry.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseParry">All-Out Defense (increased parry)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-def-dodge.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseDodge">All-Out Defense (increased dodge)</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/maneuvers/man-def-double.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseDouble">All-Out Defense (double defense)</a></h4>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-concentrate.png" width=20 height=20 hspace=5 /><a name="Concentrate">Concentrate</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 /><a name="Ready">Ready</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 /><a name="Wait">Wait</a></h3>
+<p class="style1"></p>
+
+<h2><a name="Conditions">Conditions</a></h2>
+<p class="style1"></p>
+
+<h3><a name="Postures">Postures</a></h3>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 /><a name="PostureLyingProne">Lying Prone</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 /><a name="PostureKneel">Kneeling</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/statuses/condition-crouch.webp" width=20 height=20 hspace=5 /><a name="PostureCrouch">Crouching</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/statuses/condition-sit.webp" width=20 height=20 hspace=5 /><a name="PostureSit">Sitting</a></h4>
+<p class="style1"></p>
+
+<h4><img src="images/gameaid/statuses/condition-crawl.webp" width=20 height=20 hspace=5 /><a name="PostureCrawl">Crawling</a></h4>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 /><a name="Grappled">Grappled</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 /><a name="Stun">Stunned</a></h3>
+<ul>
+  <li>If a combatant receives a major wound and fails an HT roll, it is stunned [BX381,420].</li>
+  <li>Effects
+    <ul>
+      <li>-4 to all active defenses</li>
+      <li>Only allowed maneuver is Do Nothing</li>
+    </ul>
+  </li>
+  <li>To remove stun condition, make a successful HT roll at the end of combatant's turn.</li>
+  <li>The stun condition continues for another turn if the HT roll is unsuccessful.</li>
+  <li>GURPS Combat assistant does not add this effect automatically, but it does suggest it in the "Current Effects" section of the modifier bucket dialog.</li>
+</ul>
+
+<h3><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 /><a name="MentalStun">Mentally Stunned</a></h3>
+<p class="style1"></p>
+
+<h3><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /><a name="Shock">Shocked</a></h3>
+<ul>
+  <li>If a combatant takes any damage, it is shocked for one turn.</li>
+  <li>Shock is a penalty to DX, IQ, and skills based on those attributes on your next turn (only) [BX381].</li>
+  <li>Apply the penalty (between -1 and -4) to the bucket before performing any DX or IQ roll.  The penalty is not applied automatically, but should see a button in the "Current Effects" section of the Modifier Bucket Dialog if the status is set on the token.</li>
+  <li>Make sure that the condition expires at the end of the combatant's turn (hopefully this will happen automatically).</li>
+</ul>
+
+<h3><img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a name="Reeling">Reeling</a></h3>
+<ul>
+  <li>Once a combatant has been reduced to 1/3 of their original HP, the combatant is reeling [BX380,419].</li>
+  <li>Effects
+    <ul>
+      <li>Basic speed is halved (round up)</li>
+      <li>Move is halved (round up)</li>
+      <li>Dodge is halved (round up)</li>
+    </ul>
+  </li>
+  <li>The GURPS Combat Assistant will automatically show whether or not a combatant is reeling in the Hit Points table of the character sheet, but it will not automatically apply the effects.</li>
+  <li>To apply the effect, toggle the <img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a name="Reeling">Reeling status indicator on the token.  You will notice that the speed, move, and dodge are reduced.  You will also notice that the reeling indicator in the Hit Points table starts to pulse.</li>
+
+</ul>
+
+
+
+</body>
+</html>
