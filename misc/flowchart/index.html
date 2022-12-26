@@ -7,7 +7,8 @@
 </head>
 
 <body>
-<h1 align="center">GURPS Battle Flow Chart</h1>
+<h1 align="center">Unofficial GURPS Battle Flow Chart</h1>
+<h3 align="center">&copy; 2022 W. Rhett Davis</h3>
 <ul>
   <li><a href="#BeginBattle">Begin Battle</a></li>
   <li><a href="#Maneuvers">Maneuvers</a></li>
@@ -57,6 +58,8 @@
       <li><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 /><a href="#MentalStun">Mentally Stunned</a></li>
       <li><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /><a href="#Shock">Shocked</a></li>
       <li><img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a href="#Reeling">Reeling</a></li>
+      <li><img src="images/gameaid/statuses/path-condition-exhausted.webp" width=20 height=20 hspace=5 /><a href="#Fatigued">Fatigued</a></li>
+      <li><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 /><a href="#Unconscious">Unconscious</a></li>
     </ul>
   </li>
 </ul>
@@ -72,22 +75,58 @@
 <p class="style1"></p>
 
 <h2><a name="Maneuvers">Maneuvers</a></h2>
-<p class="style1"></p>
+<p class="style1">Once the battle begins, the active combatant will be highlighted in the combat tab.  For each combatant, choose one of the maneuvers listed here and follow the steps listed.  Once each maneuver is complete, click the right-arrow at the bottom of the the combat tab to highlight the next combatant.</p>
+
+<p class="style1">Note: Each combatant has a Set Maneuver button with a select-list of maneuver icons that can be toggled.  It would be great to use these to keep track of which maneuver was chosen for each combatant.  Unfortunately, every time I try to set one, then end up getting de-selected once I click on another combatant.  So, it is not very useful.  Perhaps this is a bug, or perhaps I am not using it correctly.</p>
 
 <h3><img src="images/gameaid/maneuvers/man-nothing.png" width=20 height=20 hspace=5 /><a name="DoNothing">Do Nothing</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>This is the only maneuver available to a combatant that is <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a>, <a href="#MentalStun"><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 />Mentally Stunned</a>, or surprised.</li>
+  <li>The combatant may attempt an HT roll to recover from <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stun</a> or an IQ roll to recover from <a href="#MentalStun"><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 />Mental Stun</a>.  On success, the combatant recovers on the end of this turn [BX364].</li>
+  <li>No movement is allowed with this maneuver [BX364].</li>
+  <li>Any active defense is allowed.  Remember to included penalites for <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stun</a>, <i>etc</i>. [BX364]</li>
+  <li>All combatants are treated as if they took this maneuver before they take their first turn.</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-move.png" width=20 height=20 hspace=5 /><a name="Move">Move</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>The maneuver assumes that the combatant is moving and taking no other actions (other than free actions).</li>
+  <li>The combatant may move any number of yards/hexes up to the current value in the Move column with the yellow highlight and indicated with the characters ">>" in the left-most column of the Encumberance, Move & Dodge table of the character sheet.</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-change-posture.png" width=20 height=20 hspace=5 /><a name="ChangePosture">Change Posture</a></h3>
-<p class="style1"></p>
+<p class="style1">One full turn may be used to change posture.  This is normally done to recover from being knocked down or make one's self a smaller target for ranged attack.  Different rules apply to which posture can be chosen, based on the current posture.  See each posture in the list below for details.</p>
+<ul>
+  <li><a href="#Postures">Standing (default posture)</a>
+  <li><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 /><a href="#PostureLyingProne">Lying Down / Lying Prone</a></li>
+  <li><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 /><a href="#PostureKneel">Kneeling</a></li>
+  <li><img src="images/gameaid/statuses/condition-crouch.webp" width=20 height=20 hspace=5 /><a href="#PostureCrouch">Crouching</a></li>
+  <li><img src="images/gameaid/statuses/condition-sit.webp" width=20 height=20 hspace=5 /><a href="#PostureSit">Sitting</a></li>
+  <li><img src="images/gameaid/statuses/condition-crawl.webp" width=20 height=20 hspace=5 /><a href="#PostureCrawl">Crawling</a></li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 /><a name="Aim">Aim</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Specify the target and the weapon that is being aimed.</li>
+  <li>If 1 full turn is spent aiming, then add weapn accuracy to bucket when performing the next attack.  Do this by clicking on the red button in the Acc column of the ranged weapons table in the character sheet [BX364].</li>
+  <li>If 2 or 3 turns are spent aiming, then add an additional +1 or +2 to bucket when performing the next attack [BX364].</li>
+  <li>If targeting systems are used (sights, targeting computers, etc.) those bonuses may be added to the bucket.  The total from all of these systems cannot exceed the weapon accuracy [BX364].</li>
+  <li>If the weapon is braced, then add an additional +1 to bucket when performing the next attack [BX364].</li>
+  <li>If any other maneuver is chosen before the next attack, then the aiming bonus is lost.</li>
+  <li>The combatant may make a step movement and retain the aiming bonus <i>unless</i> the weapon is a braced, two-handed weapon [BX364].</li>
+  <li>If any active defense is used, then the aiming bonus is lost [BX364].</li>
+  <li>If any injury is received, a successful Will roll must be made, or the aiming bonus is lost [BX364].</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-evaluate.png" width=20 height=20 hspace=5 /><a name="Evaluate">Evaluate</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>This maneuver is the melee equivalent of the <a href="#Aim"><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 />Aim</a> maneuver.</li>
+  <li>Specify one visible target to be evaluated.</li>
+  <li>For each full turn spent evaluating, add a bonus of +1 to the bucket when performing the next attack [BX364].</li>
+  <li>If any other maneuver is chosen before the next attack, then the evaluate bonus is lost.</li>
+  <li>The combatant may make a step movement and retain the evaluate bonus.</li>
+  <li>The comnatant may use any active defense and retain the evaluate bonus.</li>  
+</ul>
 
 <h3><a name="Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a></h3>
 
@@ -100,11 +139,19 @@
           <li>On failure or if no Fast-Draw Skill exists, spend this turn executing <a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready maneuver</a> and attack next turn.</li>
         </ol>
       </li>
+      <li>Select the combatant and open the modifier bucket dialog.  Click on all buttons in the "Current Effects" section that are related to the attack skill to add those modifiers to the bucket.   This includes your posture and conditions such as <a href="#Shock"><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />Shock</a>, provided that the attack skill is IQ or DX-based.</li>
+      <li>If the attacker is using the <a href="#AllOutAttackDetermined"><img src="images/gameaid/maneuvers/man-aoa-determined.png" width=20 height=20 hspace=5 />All-Out Attack (determined)</a> maneuver, then add a bonus to the bucket of +4 (melee) or +1 (ranged).</li>
+      <li>If melee attack and <a href="#Evaluate"><img src="images/gameaid/maneuvers/man-evaluate.png" width=20 height=20 hspace=5 />Evaluate</a> maneuver was chosen on previous turns
+        <ol>
+          <li>If choosing new target, discard evaluate modifier</li>
+          <li>Otherwise, click on bucket and add recorded evaluate modifier</li>
+        </ol>
+      </li>
       <li>If ranged attack
         <ol>
-          <li>If aiming on previous turns
+          <li>If <a href="#Aim"><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 />Aim</a> maneuver was chosen on previous turns
             <ol>
-              <li>If choosing new target, discard aiming modifier</li>
+              <li>If choosing new target or a new weapon, discard aiming modifier</li>
               <li>Otherwise, click on bucket and add recorded aiming modifier</li>
             </ol>
           </li>
@@ -117,9 +164,11 @@
   </li>
   <li><b>Check if defense is successful</b>
     <ol>
-      <li>No active defense is possible if the defender is unaware of the attack, unconscious, immobilized, or otherwise unable to react [BX374].  In this case, assume defense fails and move to next step (calculate damage).</li>
-      <li>Select the combatant and open the modifier bucket dialog.  Click on all buttons in the "Current Effects" section that are related to active defenses.</li>
+      <li>No active defense is possible if the defender is unaware of the attack, unconscious, immobilized, executed an <a href="#AllOutAttack"><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 />All-Out Attack</a> maneuver, or is otherwise unable to react [BX374].  In this case, assume defense fails and move to next step (calculate damage).</li>
+      <li>Unless the defender has Peripheral Vision [B74] or 360&deg; Vision [B34], assume that the defender is unaware of an attack from behind and that no defense is possible.  The exception is a runaround attack [BX391] in which an attacker runs from the defender's front to its back.  In this case, proceed with the active defense and add a penalty of -2 to the bucket.</li>
+      <li>Select the combatant and open the modifier bucket dialog.  Click on all buttons in the "Current Effects" section that are related to active defenses to add those modifiers to the bucket.   This includes your posture and conditions such as <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stun</a>, but not conditions that affect DX only, such as <a href="#Shock"><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />Shock</a>.</li>
       <li>If defender's last maneuver was All-Out Defense (increased defense for <a href="#AllOutDefenseBlock"><img src="images/gameaid/maneuvers/man-def-block.png" width=20 height=20 hspace=5 />block</a>, <a href="#AllOutDefenseParry"><img src="images/gameaid/maneuvers/man-def-parry.png" width=20 height=20 hspace=5 /> parry</a>, or <a href="#AllOutDefenseDodge"><img src="images/gameaid/maneuvers/man-def-dodge.png" width=20 height=20 hspace=5 /> dodge)</a> [BX366], and defending with the method chosen at the time of the maneuver, then apply the bonus to the bucket (may do this when defending against every attack this turn).</li>
+      <li>If the attacker made a successful <a href="#Feint"><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 />Feint</a> on the previous turn or a successful <a href="#AllOutAttackFeint"><img src="images/gameaid/maneuvers/man-aoa-feint.png" width=20 height=20 hspace=5 />All-Out Attack (feint)</a> on this turn, then add the bonus to the bucket.</li>
       <li>If blocking
         <ol>
           <li>Any ready object (shield, cloak, or other large object, including another character) may be used to block [BX375].  If object is not ready, defender cannot use this defense and must spend a turn executing <a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready maneuver</a> to use this defense on future turns.</li>
@@ -162,89 +211,263 @@
       <li>Click on the box to the right of "Roll damage" in the chat message that showed the attack was successful</li>
       <li>Click "Apply All to..." button in the chat message showing the damage roll.  The targeted unit should be the unit listed.
         <ul>
-          <li>All modifiers (damage reduction, wound modifiers, and armor divisors) should be calculated automatically</li>
+          <li>All modifiers (damage reduction, wound modifiers, and armor divisors) should be calculated automatically.</li>
+          <li>Many special situations, such as half-damage range, must be manually selected in the Apply Damage Dialog.</li>
+          <li>If the attacker is using the <a href="#AllOutAttackStrong"><img src="images/gameaid/maneuvers/man-aoa-strong.png" width=20 height=20 hspace=5 />All-Out Attack (strong)</a> maneuver, then add the bonus of +2 or +1 per die to the bucket.</li>
           <li>If penetrating damage is greater than zero, then "Shock" will appear under "Calculation and Results".  Click on the chat box icon next to "Shock", then click on button in the chat message (must do both). Should see the defender's <a href="#Shock">shock status modifier <img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 />, or <img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /></a> set, depending on the amount shown.</li>
-          <li>If penetrating damage is greater than half of total HP, then "Major Wound" will appear under "Calculation and Results".  Click on the chat box icon next to "Major Wound", then click on button in the chat message to roll to avoid Stun/Knockdown.  If unsuccessful, then the <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a> and <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Prone</a> statuses will be set.</li>
+          <li>If penetrating damage is greater than half of total HP, then "Major Wound" will appear under "Calculation and Results".  Click on the chat box icon next to "Major Wound", then click on button in the chat message to roll to avoid Stun/Knockdown.  If unsuccessful, then the <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a> and <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Prone</a> statuses will be set.
+            <ul>
+              <li>If the HT roll to avoid Knockdown is failed by 5 or more, the combatant is <a href="#Unconscious"><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 />Unconscious</a>.</li>
+            </ul>
+          </li>
           <li>Click "Apply (Quietly)" in the Apply Damage Dialog.  Should see the HP (or FP) value decreased in the defender's status.</li>
           <li>Toggle the <img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a href="#Reeling">Reeling</a> status indicator if the combatant's HP has been reduced to 1/3 of its full value.  You should see the Reeling label in the Hit Points table of the combatant's character sheet, but no modifiers will be applied (and it will not pulse) unless you toggle the status indicator.</li>
+          <li>If HP is reduced to 0 or less, the combatant must make a HT roll at the start of its next turn (at -1 per full multiple of base HP below 0) [BX419].  On failure, the combatant is <a href="#Unconscious"><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 />Unconscious</a>.  This roll must be made successfully on every turn to remain conscious.</li>
+          <li>If HP is reduced to -1&times;HP or less, the combatant must make an immediate HT roll or die[BX419].  This roll must be made again each time an injury is received that reduces HP to another multiple of base HP (<i>i.e.</i> -2&times;HP, -3&times;HP, and -4&times;HP) [BX419].
+            <ul>
+              <li>If the HT roll to avoid death is failed by 1 or 2, the combatant does not die but is mortally wounded.  The combatant is instantly incapacitated and must make an HT roll every 30 minutes to avoid death.  On a critical-success of the HT roll, the combatant miraculously pulls through and does not die (but is still incapacitated) [BX423].</li>
+            </ul>
+          </li>
+          <li>If HP is reduced to -5&times;HP or less, the combatant dies immediately [BX419].</li>
+          <li>If HP is reduced to -10&times;HP or less, the combatant's body is completely destroyed [BX419].</li>
+          <li>If damage type is <i>fat</i> (fatigue), then see the notes in the <img src="images/gameaid/statuses/path-condition-exhausted.webp" width=20 height=20 hspace=5 /><a href="#Fatigued">Fatigue</a> section for the effects of reduced FP.</li>
         </ul>
       </li>
       <li>Right-click on defender and toggle target status off (otherwise next attack will be applied to the same defender).</li>
     </ol>
 
   </li>
+  <li>If the attacker is using the <a href="#AllOutAttackDouble"><img src="images/gameaid/maneuvers/man-aoa-double.png" width=20 height=20 hspace=5 />All-Out Attack (double)</a> maneuver, then it may make an additional attack.</li>
   
 </ol>
 <p class="style1"></p>
 
 <h3><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 /><a name="Feint">Feint</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Use the maneuver to fool an opponent into lowering their defenses [BX365].</li>
+  <li>The combatant makes an attack roll as with a normal <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> maneuver.</li>
+  <li>The defender also makes an attack roll with whatever weapon, shield, or cloak it chooses, or a simple DX roll.</li>
+  <li>If the feinter's roll fails, the feint fails.</li>
+  <li>If the feinter's roll succeeds, but the defender's roll succeeds by <i>as much or more</i>, then the feint fails.</li>
+  <li>If the feinter's roll succeeds, but the defender's roll fails, and if the feinter attacks the defender on its next turn, then the defender must apply the margin of success as a penalty on active defense rolls for those attacks.
+    <ul>
+      <li><i>e.g.</i> feinter's effective skill is 15 and the roll is 12 (success by 3)</li>
+      <li>defender defends with a -3 penalty on feinter's next turn [BX365]</li>
+    </ul>
+  </li>
+  <li>If the feinter's roll succeeds, but the defender's roll succeeds by <i>less</i>, then subtract the feinter's margin of victory from the defender's defense.
+    <ul>
+      <li><i>e.g.</i> feinter's effective skill is 15 and the roll is 10 (success by 5)</li>
+      <li>defender's effective skill is 14 and the roll is 12 (success by 2)</li>
+      <li>margin of victory is 5-2=3</li>
+      <li>defender defends with a -3 penalty on feinter's next turn [BX365]</li>
+    </ul>
+  </li>
+  <li>Allies cannot take advantage of a feint.  The defender's penalty applies only to the feinter's next attack turn.</li>
+  <li>If the feinter chooses <a href="#AllOutAttackDouble"><img src="images/gameaid/maneuvers/man-aoa-double.png" width=20 height=20 hspace=5 />All-Out Attack (double)</a> on the next turn, then the penalty will apply to both attacks.</li>
+  <li>If the feinter cannot attack the defender on the next turn, the advantage is lost.</li>
+  <li>After attacking with a shield, a combatant may also feint with the shield [BX365].</li>
+  <li>A step movement is allowed.</li>
+  <li>Any active defense is allowed.  However, if a combatant feints and then parries with an unbalanced weapon, it cannot attack on its next turn, rendering the feint useless.</li>
+
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-move-attack.png" width=20 height=20 hspace=5 /><a name="AllOutAttack">All-Out Attack</a></h3>
-<p class="style1"></p>
+<p class="style1">Specify one of the following five options [BX365].</p>
 
 <h4><img src="images/gameaid/maneuvers/man-aoa-determined.png" width=20 height=20 hspace=5 /><a name="AllOutAttackDetermined">All-Out Attack (determined)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>For melee attacks, make a single <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> with a +4 bonus.</li>
+  <li>For ranged attacks, make a single <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> with a +1 bonus.</li>
+  <li>Move up to half of normal move, but only forward.</li>
+  <li>No active defense are allowed until the combatant's next turn.</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-aoa-double.png" width=20 height=20 hspace=5 /><a name="AllOutAttackDouble">All-Out Attack (double)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Make two melee <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attacks</a> against the same defender.</li>
+  <li>May use two weapons or one weapon that does not need to be readied after use.</li>
+  <li>Move up to half of normal move, but only forward.</li>
+  <li>No active defense are allowed until the combatant's next turn.</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-aoa-feint.png" width=20 height=20 hspace=5 /><a name="AllOutAttackFeint">All-Out Attack (feint)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Make one <a href="#Feint"><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 />Feint</a> followed by one melee <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a>.</li>
+  <li>Apply the feint to this turn instead of the next turn.</li>
+  <li>Move up to half of normal move, but only forward.</li>
+  <li>No active defense are allowed until the combatant's next turn.</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-aoa-strong.png" width=20 height=20 hspace=5 /><a name="AllOutAttackStrong">All-Out Attack (strong)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Make a single melee <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a>.</li>
+  <li>If the attack succeeds, increase damage by +2 or +1 per die, whichever is larger.</li>
+  <li>This applies only to melee attacks with ST-based thrust or swing damage (<i>e.g.</i> no force swords).</li>
+  <li>Move up to half of normal move, but only forward.</li>
+  <li>No active defense are allowed until the combatant's next turn.</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-aoa-suppress.png" width=20 height=20 hspace=5 /><a name="AllOutAttackSuppress">All-Out Attack (suppression fire)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Use this turn to spray an area with automatic fire.</li>
+  <li>Must use a ranged weapon with RoF 5+ [BX365].</li>
+  <li>Pick a target zone 2 yards across [BX409].</li>
+  <li>Specify how many shots will be fired.</li>
+  <li>Make an <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> against anyone (friend or foe) who moves within 1 yard of a center-line drawn from the combatant to the middle of the zone [BX409].</li>
+  <li>Effective attack skill cannot exceed 6 + rapid-fire bonus for the weapon (or 8 + rapid-fire bonus for vehicle or tripod-mounted weapons) [BX409].</li>
+  <li>Choose a random hit location from one of the tables in [BX552].</li>
+  <li>If all shots strike targets, then no more shots are made until the combatant's next turn.</li>
+  <li>Move up to half of normal move, but only forward.</li>
+  <li>No active defense are allowed until the combatant's next turn.</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-move-attack.png" width=20 height=20 hspace=5 /><a name="MoveAttack">Move and Attack</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Move by the normal amount as described for the <a href="#Move"><img src="images/gameaid/maneuvers/man-move.png" width=20 height=20 hspace=5 />Move</a> maneuver [BX365].</li>
+  <li>Attack as described for the <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> maneuver, but with these penalties:
+    <ul>
+      <li>If the attack is ranged, add a penalty to the bucket of -2 or the weapon's Bulk rating, whichever is worse [BX365].</li>
+      <li>With a melee attack (other than a slam [BX371]), apply a penalty of -4 to the bucket or ensure that the effictive skill is no higher than 9 (whichever is worse) [BX366].</li>
+    </ul>
+  </li>
+  <li>Apply a -2 penalty to rolls needed to avoid falling or tripping [BX366].</li>
+  <li>The only active defenses allowed are Dodge and Block.  Parry and retreat are not allowed [BX366].</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-defense.png" width=20 height=20 hspace=5 /><a name="AllOutDefense">All-Out Defense</a></h3>
-<p class="style1"></p>
+<p class="style1">Specify one of the following four options [BX366].</p>
 
 <h4><img src="images/gameaid/maneuvers/man-def-block.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseBlock">All-Out Defense (increased block)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Add +2 to effective Block skill every time the combatant blocks until its next turn.</li>
+  <li>A step movement is allowed.</li>
+  <li>Another active defense may be chosen, if desired (with no bonus).</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-def-parry.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseParry">All-Out Defense (increased parry)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Add +2 to effective Parry skill every time the combatant parries until its next turn.</li>
+  <li>A step movement is allowed.</li>
+  <li>Another active defense may be chosen, if desired (with no bonus).</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-def-dodge.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseDodge">All-Out Defense (increased dodge)</a></h4>
-<p class="style1"></p>
+<ul>
+  <li>Add +2 to effective Dodge skill every time the combatant dodges until its next turn.</li>
+  <li>Up to half of normal movement is allowed.</li>
+  <li>Another active defense may be chosen, if desired (with no bonus).</li>
+</ul>
 
 <h4><img src="images/gameaid/maneuvers/man-def-double.png" width=20 height=20 hspace=5 /><a name="AllOutDefenseDouble">All-Out Defense (double defense)</a></h4>
+
+<ul>
+  <li>If any defense fails until your next turn, you may try a second, different defense.  For instance, if failing a block, you may try a dodge or parry.  Also, if you fail to parry with one hand, you may attempt a parry with your other hand.</li>
+  <li>A step movement is allowed.</li>
+</ul>
 <p class="style1"></p>
 
 <h3><img src="images/gameaid/maneuvers/man-concentrate.png" width=20 height=20 hspace=5 /><a name="Concentrate">Concentrate</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Many actions, such as casting spells, sense rolls, leadership abilities, or using equipment require this maneuver for one or more full turns.</li>
+  <li>If an active defense is used, or if knocked-down or otherwise injured, then make a Will roll with a -3 penalty to maintain concentration.  Otherwise, concentration is lost, and the combatant must start over [BX366].</li>
+  <li>A step movement is allowed [BX366].</li>
+</ul>
 
 <h3><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 /><a name="Ready">Ready</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Use this maneuver to draw a weapon, arrow, shield, <i>etc.</i> or to reload a weapon.</li>
+  <li>A step is allowed [BX366].</li>
+  <li>Any active defense is allowed [BX366].</li>
+</ul>
+
 
 <h3><img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 /><a name="Wait">Wait</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>Do nothing until an event occurs before your next turn that you specify at the time you execute your <img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 /> Wait maneuver [BX366].</li>
+  <li>Once that event occurs, you must execute the maneuver you specified at the time you execute your <img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 /> Wait maneuver [BX366].</li>
+  <li>If the event is another combatant's action, then your maneuver interrupts the other combatant's maneuver.  That combatant executes its maneuver after you complete yours.</li>
+  <li>You may use this maneuver to execute a <i>Stop Thrust</i>.  In this case, convert the <img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 />Wait into an <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> or <a href="#AllOutAttack"><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 />All-Out Attack</a> against any one foe that moves one or more yards towards you to make a melee attack or evade [BX368].  You strike first if you have the longer reach. If you hit and your foe fails to defend, add +1 to thrust damage for every two full yards your attacker moved toward you.</li>
+  <li>No movement is allowed until your <img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 />Wait is triggered.  At that point, move according the specified maneuver.</li>
+  <li>You may use any active defense while waiting for your maneuver to be triggered.  But if any active defense is used while waiting, then the wait may not be converted into an <a href="#AllOutAttack"><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 />All-Out Attack</a>.  Instead, it must be converted into a normal <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a>.</li>
+
+</ul>
 
 <h2><a name="Conditions">Conditions</a></h2>
 <p class="style1"></p>
 
 <h3><a name="Postures">Postures</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>The default posture is standing.  There is no icon associated with the standing posture.</li>
+  <li>While standing:
+    <ul>
+      <li>You may change posture to kneeling with the step portion of a maneuver [BX364].</li>
+      <li>You may change posture to crouching as a free action [BX364].</li>
+      <li>You may change to any other posture in one turn with a change posture maneuver [BX364].</li>
+    </ul>
+  </li>
+</ul>
 
-<h4><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 /><a name="PostureLyingProne">Lying Prone</a></h4>
-<p class="style1"></p>
+<h4><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 /><a name="PostureLyingProne">Lying Down (face-up) or prone (face-down)</a></h4>
+<p class="style1">While lying down:</p>
+<ul>
+  <li>You may change posture to crawling, kneeling, or sitting in one turn with a change posture maneuver [BX364].</li>
+  <li>Melee attacks from this posture suffer a -4 penalty [BX551].</li>
+  <li>Active defense rolls suffer a -3 penalty [BX551].</li>
+  <li>Ranged attacks to your torso, groin, or legs suffer a -2 penalty [BX548,551].</li>
+  <li>If an attacker is at the same or lower elevation and farther away than his own
+    height, he attacks your torso as if it were half exposed (-2 to hit), and cannot
+    attack your groin, legs, or feet at all. If you also have your head down, he cannot
+    attack your neck, eyes, or face [BX551].</li>
+  <li>Movement is limited to 1 hex per turn [BX551].</li>
+  <li>A human figure occupies 2 hexes [BX551].</li>
+</ul>
 
 <h4><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 /><a name="PostureKneel">Kneeling</a></h4>
-<p class="style1"></p>
+<p class="style1">While kneeling:</p>
+<ul>
+  <li>You may change posture to standing with the step portion of a maneuver [BX364].</li>
+  <li>You may change to any other posture in one turn with a change posture maneuver [BX364].</li>
+  <li>Melee attacks from this posture suffer a -2 penalty [BX551].</li>
+  <li>Active defense rolls suffer a -2 penalty [BX551].</li>
+  <li>Ranged attacks to your torso, groin, or legs suffer a -2 penalty [BX548,551].</li>
+  <li>Movement cost increases to 3 per hex [BX551].</li>
+</ul>
 
 <h4><img src="images/gameaid/statuses/condition-crouch.webp" width=20 height=20 hspace=5 /><a name="PostureCrouch">Crouching</a></h4>
-<p class="style1"></p>
+<p class="style1">While crouching:</p>
+<ul>
+  <li>You may change posture to standing as a free action [BX364].</li>
+  <li>Melee attacks from this posture suffer a -2 penalty [BX551].</li>
+  <li>Ranged attacks to your torso, groin, or legs suffer a -2 penalty [BX548,551].</li>
+  <li>Movement cost increases to 1.5 per hex [BX551].</li>
+</ul>
 
 <h4><img src="images/gameaid/statuses/condition-sit.webp" width=20 height=20 hspace=5 /><a name="PostureSit">Sitting</a></h4>
-<p class="style1"></p>
+<p class="style1">While sitting:</p>
+<ul>
+  <li>You may change to any other posture in one turn with a change posture maneuver [BX364].</li>
+  <li>Melee attacks from this posture suffer a -2 penalty [BX551].</li>
+  <li>Active defense rolls suffer a -2 penalty [BX551].</li>
+  <li>Ranged attacks to your torso, groin, or legs suffer a -2 penalty [BX548,551].</li>
+  <li>No movement is allowed [BX551].</li>
+</ul>
 
 <h4><img src="images/gameaid/statuses/condition-crawl.webp" width=20 height=20 hspace=5 /><a name="PostureCrawl">Crawling</a></h4>
-<p class="style1"></p>
+<p class="style1">While crawling:</p>
+<ul>
+  <li>You may change to any other posture in one turn with a change posture maneuver [BX364].</li>
+  <li>Melee attacks from this posture suffer a -4 penalty [BX551].</li>
+  <li>Only reach "C" melee attacks are allowed.</li>
+  <li>Active defense rolls suffer a -3 penalty [BX551].</li>
+  <li>Ranged attacks to your torso, groin, or legs suffer a -2 penalty [BX548,551].</li>
+  <li>If an attacker is at the same or lower elevation and farther away than his own
+    height, he attacks your torso as if it were half exposed (-2 to hit), and cannot
+    attack your groin, legs, or feet at all. If you also have your head down, he cannot
+    attack your neck, eyes, or face [BX551].</li>
+  <li>Movement cost increases to 3 per hex [BX551].</li>
+  <li>A human figure occupies 2 hexes [BX551].</li>
+</ul>
 
 <h3><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 /><a name="Grappled">Grappled</a></h3>
 <p class="style1"></p>
@@ -269,7 +492,24 @@
 <h3><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /><a name="Shock">Shocked</a></h3>
 <ul>
   <li>If a combatant takes any damage, it is shocked for one turn.</li>
-  <li>Shock is a penalty to DX, IQ, and skills based on those attributes on your next turn (only) [BX381].</li>
+  <li>Shock is a penalty to DX, IQ, and skills based on those attributes on your next turn (only) [BX381].
+    <ol>
+      <li>Shock does not affect [<a href="http://www.sjgames.com/gurps/faq/FAQ4-3.html#SS3.4.5.2">ref</a>]:
+        <ol>
+          <li>Any active defense</li>
+          <li>Any resistance roll</li>
+          <li>DX rolls to remain standing after Knockback, if that wound caused the Knockback</li>
+        </ol>
+      </li>
+      <li>Shock does affect [<a href="http://www.sjgames.com/gurps/faq/FAQ4-3.html#SS3.4.5.2">ref</a>]:
+        <ol>
+          <li>Recovery from Mental Stun</li>
+          <li>All other DX or IQ rolls</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>If you were interrupted during your action by someone Waiting, and get hurt, you do suffer penalties on your current action [<a href="http://www.sjgames.com/gurps/faq/FAQ4-3.html#SS3.4.5.2">ref</a>].</li>
   <li>Apply the penalty (between -1 and -4) to the bucket before performing any DX or IQ roll.  The penalty is not applied automatically, but should see a button in the "Current Effects" section of the Modifier Bucket Dialog if the status is set on the token.</li>
   <li>Make sure that the condition expires at the end of the combatant's turn (hopefully this will happen automatically).</li>
 </ul>
@@ -285,10 +525,40 @@
     </ul>
   </li>
   <li>The GURPS Combat Assistant will automatically show whether or not a combatant is reeling in the Hit Points table of the character sheet, but it will not automatically apply the effects.</li>
-  <li>To apply the effect, toggle the <img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 /><a name="Reeling">Reeling status indicator on the token.  You will notice that the speed, move, and dodge are reduced.  You will also notice that the reeling indicator in the Hit Points table starts to pulse.</li>
-
+  <li>To apply the effect, toggle the <img src="images/gameaid/statuses/cth-condition-major-wound.webp" width=20 height=20 hspace=5 />Reeling status indicator on the token.  You will notice that the speed, move, and dodge are reduced.  You will also notice that the reeling indicator in the Hit Points table starts to pulse.</li>
 </ul>
 
+<h3><img src="images/gameaid/statuses/path-condition-exhausted.webp" width=20 height=20 hspace=5 /><a name="Fatigued">Fatigued</a></h3>
+<ul>
+  <li>Once a combatant has been reduced to 1/3 of their original FP, the combatant is fatigued / tired [BX426].</li>
+  <li>Effects
+    <ul>
+      <li>Move is halved (round up)</li>
+      <li>Dodge is halved (round up)</li>
+      <li>ST is halved (round up)</li>
+      <li>ST-based quantaties such as HP and damage are not affected.</li>
+    </ul>
+  </li>
+  <li>The GURPS Combat Assistant will automatically show whether or not a combatant is tired in the Fatigue Points table of the character sheet, but it will not automatically apply the effects.</li>
+  <li>To apply the effect, toggle the <img src="images/gameaid/statuses/path-condition-exhausted.webp" width=20 height=20 hspace=5 />Fatigued status indicator on the token.  You will notice that the move and dodge are reduced.  You will also notice that the tired indicator in the Fatigue Points table starts to pulse.</li>
+  <li>If FP is reduced to 0 or less, the combatant is on the verge of collapse [BX426].
+    <ul>
+      <li>Each further FP lost also results in the loss of 1 HP.</li>
+      <li>Combatant must make a successful Will roll to do any maneuver other than Do Nothing.</li>
+      <li>On a failed Will roll, the combatant collapses and must Do Nothing until FP becomes positive.</li>
+      <li>On a critical-failre, the combatant must also make a successful HT roll to avoid a heart-attack [BX429].</li>
+    </ul>
+  </li>
+  <li>If FP is reduced to -1&times;FP (the minimum possible FP), the combatant is <a href="#Unconscious"><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 />Unconscious</a> until FP becomes positive.  Any further FP injury will apply as HP injury [BX426].</li>
+</ul>
+
+<h3><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 /><a name="Unconscious">Unconscious / Disabled</a></h3>
+<ul>
+  <li>No actions may be taken while unconscious [BX423].</li>
+  <li>With HP > 0, combatant wakes up 15 minutes after falling unconscious [BX423].</li>
+  <li>With 0 &ge; HP > -1&times;HP, combatant makes an HT roll to awaken every hour [BX423].</li>
+  <li>With HP &le; -1&times;HP, combatant makes a single HT roll to awaken in 12 hours [BX423].</li>
+</ul>
 
 
 </body>
