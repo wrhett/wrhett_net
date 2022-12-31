@@ -62,6 +62,16 @@
       <li><img src="images/gameaid/statuses/dd-condition-unconscious.webp" width=20 height=20 hspace=5 /><a href="#Unconscious">Unconscious</a></li>
     </ul>
   </li>
+  <li><a href="#SpecialSituations">Special Combat Situations</a>
+    <ul>
+      <li><a href="#StrikeWeapon">Striking at Weapons</a>
+        <ul>
+          <li><a href="#Disarm">Disarming</a></li>
+          <li><a href="#BreakWeapon">Breaking a Weapon</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h2><a name="BeginBattle">BeginBattle</a></h2>
@@ -158,6 +168,7 @@
           <li>Add range modifier to bucket: Ctrl-click-drag a line to the target, then click on target.</li>
         </ol>
       </li>
+      <li>If targeting a specific part of the body, the apply the penalty from the table in [BX552] to the bucket.  This may be done by selecting the location in the Hit Locations section of the Modifier Bucket dialog, though this dialog also includes locations from [MA137] that are not included in [BX552].  Note that locations with note [1] in the table (<i>i.e.</i> eye, skull, face, groin, neck, and vitals) will hit the torso if they miss by 1.</li> 
       <li>Perform the attack.  Click on Level button in Weapon table in Character Sheet and check chat window for result.</li>
       <li>If attack is successful, move to next step.  Otherwise, turn ends.</li>
     </ol>
@@ -212,7 +223,7 @@
       <li>Click "Apply All to..." button in the chat message showing the damage roll.  The targeted unit should be the unit listed.
         <ul>
           <li>All modifiers (damage reduction, wound modifiers, and armor divisors) should be calculated automatically.</li>
-          <li>Many special situations, such as half-damage range, must be manually selected in the Apply Damage Dialog.</li>
+          <li>Many special situations, such as half-damage range and hit location, must be manually selected in the Apply Damage Dialog.  Once selected, all modifiers are calculated automatically.</li>
           <li>If the attacker is using the <a href="#AllOutAttackStrong"><img src="images/gameaid/maneuvers/man-aoa-strong.png" width=20 height=20 hspace=5 />All-Out Attack (strong)</a> maneuver, then add the bonus of +2 or +1 per die to the bucket.</li>
           <li>If penetrating damage is greater than zero, then "Shock" will appear under "Calculation and Results".  Click on the chat box icon next to "Shock", then click on button in the chat message (must do both). Should see the defender's <a href="#Shock">shock status modifier <img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 />, <img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 />, or <img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /></a> set, depending on the amount shown.</li>
           <li>If penetrating damage is greater than half of total HP, then "Major Wound" will appear under "Calculation and Results".  Click on the chat box icon next to "Major Wound", then click on button in the chat message to roll to avoid Stun/Knockdown.  If unsuccessful, then the <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a> and <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Prone</a> statuses will be set.
@@ -560,6 +571,78 @@
   <li>With HP &le; -1&times;HP, combatant makes a single HT roll to awaken in 12 hours [BX423].</li>
 </ul>
 
+<h2><a name="SpecialSituations">Special Combat Situations</a></h2>
+<p class="style1"></p>
+
+<h3><a name="StrikeWeapon">Striking at Weapons</a></h3>
+<ul>
+  <li>First, state whether the intent is to <a href="Disarm">Disarm</a> or <a href="BreakWeapon">Break the Weapon</a> [BX400].</li>
+  <li>If <a href="Disarm">Disarming</a>
+    <ul>
+      <li>Only a weapon that can parry may be used to disarm (<i>i.e.</i> only unarmed attacks, melee weapons, and some thrown weapons may be used to disarm) [BX401].  See the Parry column in the Melee Weapon Table [B271].</li>
+      <li>Increase the attack penalty by -2, <i>unless</i> the weapon being used is a fencing weapon (<i>i.e.</i> main-gauche, jitte/sai, rapier, saber, or smallsword) [BX401]. Look for "F" in the Parry column of the Melee Weapon Table [B271].  Remember that main-gauche and jitte/sai are not weapons <i>per se</i> but rather skills that can be used with certian weapons [B208].</li>
+    </ul>
+  </li>
+  <li>Striking a weapon, whether to disarm or break the weapon, incurs an attack penalty depending on the weapon's reach.  The position of the attacker also depends on the weapon's reach. [BX400]
+    <ul>
+      <li>Defenders' weapons with reach "C" incur a -5 penalty, and the attacker's weapon must reach the defender's hex.</li>
+      <li>Defenders' weapons with reach 1 incur a -4 penalty, and the attacker's weapon must reach to the defender's hex or the hex directly in front of the defender.</li>
+      <li>Defenders' weapons with reach 2 or greater incur a -3 penalty, and the attacker's weapon must reach the defender's hex or any of a number of hexes directly in front of the defender equal to the defender's weapon's reach. 
+        <ul>
+          <li><i>Exception:</i> A combatant may always attack a reach 2+ weapon that was used to attack the combatant on the previous turn</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Defending when a weapon is attacked
+    <ul>
+      <li>a defemder may Dodge or Parry with the attacked weapon</li>
+      <li>a defender may not Block or Parry with a different weapon</li>
+      <li>the defense bonus of a shield is ignored</li>
+      <li>a defender may combine a dodge or parry with a retreat</li>
+    </ul>
+  </li>
+</ul>
+
+<h4><a name="Disarm">Disarming</a></h4>
+<ul>
+  <li>Once successful attack has been made against a weapon <i>and</i> any defense has failed, the attacker may disarm [BX401]</li>
+  <li>To disarm, roll a Quick Contest [BX348] of weapon skills [BX401]. 
+    <ul>
+      <li>In general, the attacker rolls against their skill with the weapon being used to disarm, and the defender rolls against their skill with the targeted weapon.</li>
+      <li>If a missile weapon is targeted, roll against DX instead.</li>
+      <li>Either the attacker or defender may make a ST-based skill roll instead, if that would be better.</li>
+      <li>Add a +2 modifier if a Jitte/Sai or Whip skill is used.</li>
+      <li>The defender gets a +2 modifier if a 2-handed weapon is used.</li>
+    </ul>
+  </li>
+  <li>Each combatant rolls against their effective skill.  The winner is the one with the largest margin of success (or smallest margin of failure) [BX 348].  Note that the attacker's effective skill does <i>not</i> include the modifiers added when rolling to <a href="#StrikeWeapon">Strike the Weapon</a> [<a href="https://thecollaborativegamer.wordpress.com/2016/01/14/thursday-is-gurpsday-gurps-melee-academy-disarming/">ref</a>].</li>
+  <li>If the attacker's margin is larger than the defender's margin, the weapon flies 1 yard in a random direction [BX401].</li>
+  <li>If there is a tie, or the defender's margin is greater by 1 or 2, then he keeps the weapon, but it is unready.</li>
+  <li>If the defender's margin is greater by 3 or more, then he keeps the weapon, and it remains ready.</li>
+  <li>If the attacker rolls a critical failure, then the attacker is disarmed.</li>
+
+</ul> 
+
+<h4><a name="BreakWeapon">Breaking a Weapon</a></h4>
+<ul>
+  <li>Once successful attack has been made against a weapon <i>and</i> any defense has failed, the attacker may damage the weapon targeted [BX401]</li>
+  <li>To find a weapon's HP, see the Object Hit Points Table [BX558].  Find the weight in the Weapon Table [B271] and use the Homogeneous/Diffuse column, in general.  <i>e.g.</i> clubs, maces, broadswords, and rapiers have (3 lbs.) HP 12, while sabers and smallswords (2 lbs.) have HP 10.</li>
+  <li>Determine the weapon's damage reduction (DR) [BX483].
+    <ul>
+      <li>Solid wooden weapons (<i>e.g.</i> clubs) have DR 2.</li>
+      <li>Small metal or metal-wood weapons (<i>e.g.</i> guns, axes) have DR 4.</li>
+      <li>Solid metal weapons have DR 6.</li>
+    </ul>
+  </li>
+  <li>Weapons in good repair are assumed to have HT 12.  Modifiers of +2 to -3 may be applied for especially strong or poorly made weapons [BX483].</li>
+  <li>Roll damage normally and apply the damage to the weapon [BX483].
+    <ul>
+      <li>If HP is reduced to 0 or less, the weapon must make a HT roll each turn to avoid breaking.  The weapon can still be repaired, later.</li>
+      <li>If HP is reduced to -1&times;HP or less, the weapon must make a HT roll to avoid being destroyed completely and cannot be repaired.  This roll must be made again each time damage is received that reduces HP to another multiple of base HP (<i>i.e.</i> -2&times;HP, -3&times;HP, and -4&times;HP).</li>
+      <li>If HP is reduced to -5&times;HP or less, the weapon is destroyed immediately.</li>
+    </ul>
+  </li>
 
 </body>
 </html>
