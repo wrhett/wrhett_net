@@ -8,7 +8,7 @@
 
 <body>
 <h1 align="center">Unofficial GURPS Battle Flow Chart</h1>
-<h3 align="center">&copy; 2022 W. Rhett Davis</h3>
+<h3 align="center">&copy; 2023 W. Rhett Davis</h3>
 <ul>
   <li><a href="#BeginBattle">Begin Battle</a></li>
   <li><a href="#Maneuvers">Maneuvers</a></li>
@@ -64,6 +64,9 @@
   </li>
   <li><a href="#SpecialSituations">Special Combat Situations</a>
     <ul>
+      <li><a href="#Contest">Contests</a></li>
+      <li><a href="#Grab">Grabbing</a></li>
+      <li><a href="#Grapple">Grappling</a></li>
       <li><a href="#StrikeWeapon">Striking at Weapons</a>
         <ul>
           <li><a href="#Disarm">Disarming</a></li>
@@ -168,7 +171,7 @@
           <li>Add range modifier to bucket: Ctrl-click-drag a line to the target, then click on target.</li>
         </ol>
       </li>
-      <li>If targeting a specific part of the body, the apply the penalty from the table in [BX552] to the bucket.  This may be done by selecting the location in the Hit Locations section of the Modifier Bucket dialog, though this dialog also includes locations from [MA137] that are not included in [BX552].  Note that locations with note [1] in the table (<i>i.e.</i> eye, skull, face, groin, neck, and vitals) will hit the torso if they miss by 1.</li> 
+      <li><a name="TargetLocation">If targeting a specific part of the body</a>, the apply the penalty from the table in [BX552] to the bucket.  This may be done by selecting the location in the Hit Locations section of the Modifier Bucket dialog, though this dialog also includes locations from [MA137] that are not included in [BX552].  Note that locations with note [1] in the table (<i>i.e.</i> eye, skull, face, groin, neck, and vitals) will hit the torso if they miss by 1.</li> 
       <li>Perform the attack.  Click on Level button in Weapon table in Character Sheet and check chat window for result.</li>
       <li>If attack is successful, move to next step.  Otherwise, turn ends.</li>
     </ol>
@@ -481,7 +484,40 @@
 </ul>
 
 <h3><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 /><a name="Grappled">Grappled</a></h3>
-<p class="style1"></p>
+<p class="style1">While grappled:</p>
+<ul>
+  <li>DX is -4 [BX370]</li>
+  <li>No movement is allowed [BX370]
+    <ul>
+      <li><i>Exception:</i> If the grappled combatant's ST is 2&times; grappler's ST, then the grappler is simply extra encumberance to the grappled combatant [BX370].</li>
+    </ul>
+  </li>
+  <li>Actions are limited to the following:
+    <ul>
+      <li><a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> or <a href="#AllOutAttack"><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 />All-Out Attack</a> using a limb or other appendage that was not grappled.
+        <ul>
+          <li>Only unarmed attacks or weapons with reach C are allowed [BX371]</li>
+        </ul>
+      </li>
+      <li><a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready</a> an item with a free hand, but must make a DX roll to succeed.  On failure, the item is dropped [BX371].</li>
+      <li>Break free with a <a href="#QuickContest">Quick Contest</a> of ST [BX370].
+        <ul>
+          <li>Grappler has +5 bonus if using 2 hands</li>
+          <li>Grappler has +5 bonus is grappled combatant is pinned with one hand</li>
+          <li>Grappler has +10 bonus is grappled combatant is pinned with two hands</li>
+          <li>Grappled combatant has -4 penalty if <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stunned</a></li>
+          <li>Either combatant has +2 bonus for each arm used over 2</li>
+          <li>If the grappled combatant is pinned, then only one attempt to break free can be made every 10 seconds.</li>
+          <li>If the grappled combatant breaks free, he may move 1 yard in any direction</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+</ul>
+
+
+
 
 <h3><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 /><a name="Stun">Stunned</a></h3>
 <ul>
@@ -498,7 +534,16 @@
 </ul>
 
 <h3><img src="images/gameaid/statuses/dd-condition-stunned-iq.webp" width=20 height=20 hspace=5 /><a name="MentalStun">Mentally Stunned</a></h3>
-<p class="style1"></p>
+<ul>
+  <li>If a combatant is surprised, GM rolls 1d to determine how many turns they are mentally stunned [BX393].</li>
+  <li>After that number of rounds, the combatant may recover by making a successful IQ roll and rejoin the combat on the <i>next</i> turn</li>
+  <li>Effects [BX420]
+    <ul>
+      <li>-4 to all active defenses</li>
+      <li>Only allowed maneuver is Do Nothing</li>
+    </ul>
+  </li>
+</ul>
 
 <h3><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock2.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock3.webp" width=20 height=20 hspace=5 /><img src="images/gameaid/statuses/condition-shock4.webp" width=20 height=20 hspace=5 /><a name="Shock">Shocked</a></h3>
 <ul>
@@ -574,10 +619,195 @@
 <h2><a name="SpecialSituations">Special Combat Situations</a></h2>
 <p class="style1"></p>
 
+<h3><a name="Contest">Contests</a></h3>
+
+<ul>
+  <li><a name="QuickContest"><b>Quick Contest</b> [BX348]</a>
+    <ul>
+      <li>Apply these rules for contests that take one second / one turn (<i>e.g.</i> both grabbing for a weapon on the ground)</li>
+      <li>Each combatant makes a 3d success roll <i>vs.</i> the skill involved in the contest to see who will win</li>
+      <li>The winner is the one with the largest margin of victory (or smallest margin of failure)</li>
+      <li>In a tie, nobody wins</li>
+    </ul>
+  </li>
+  <li><a name="QiuckContestResistance"><b>Quick Contest of Attacker Ability and Defender Resistance</b> [BX348]</a>
+    <ul>
+      <li>If the Quick Contest is between an Attacker's ability and Defender's resistance, apply these special rules</li>
+      <li>Attacker makes a 3d success roll <i>vs.</i> attack skill, and defender makes 3d success rull <i>vs.</i> resistance to see who will win</li>
+      <li>Attacker must succeed to win (may not win by smallest margin of failure)</li>
+      <li>In a tie, the defender wins</li>
+    </ul>
+  </li>
+  <li><a name="RegularContest"><b>Regular Contest</b> [BX349]</a>
+    <ul>
+      <li>Apply these rules for contests that take more than one second / one turn (<i>e.g.</i> arm wrestling)</li>
+      <li>Each combatant makes a 3d success roll <i>vs.</i> the skill involved in the contest to see who will win</li>
+      <li>The contest continues until one combatant succeeds and the other fails</li>
+      <li>If both succeed or both fail, the contest continues</li>
+    </ul>
+  </li>
+</ul>
+
+<h3><a name="Grab">Grabbing</a></h3>
+
+<ul>
+  <li>Apply these rules if a combatant tries to grab something out of another combatant's hand (<i>e.g.</i> a weapon) [BX370]</li>
+  <li>Attacker rolls againt DX or grappling skill (<i>i.e.</i> Judo [B203], Sumo Wrestling [B223], or Wrestling [B228]) with the normal <a href="#TargetLocation">penalty to hit the hand</a> (<i>i.e.</i> -4).  On success, the item is grabbed.</li>
+  <li>On subsequent turns, both combatants roll for a <a href="#RegularContest">Regular Contest</a> of ST.  
+    <li>If the attacker wins, he wrests the item away</li>
+    <li>If the defender wins, the attacker loses his grip</li>
+    <li>If nobody wins, the contest continues</li>
+  </li>
+</ul>
+
+<h3><a name="Grapple">Grappling</a></h3>
+<ul>
+  <li>This is an attempt to grab an opponent's body for the purpose of subduing him [BX370].  See <a href="#Grappled"><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 />Grappled</a> condition for details.</li>
+  <li>Attacker rolls againt DX or grappling skill (<i>i.e.</i> Judo [B203], Sumo Wrestling [B223], or Wrestling [B228]).
+    <ul>
+      <li>Attacker may combine this attack with <img src="images/gameaid/maneuvers/man-evaluate.png" width=20 height=20 hspace=5 /><a href="#Evaluate">Evaluate</a> or <img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 /><a href="#Feint">Feint</a> maneuvers to improve this attack.</li>
+      <li>If attacker has Extra Arms [B53] and uses them to grapple, add a +2 bonus for each additional arm [BX370].</li>
+      <li>Arm(s) used to grapple may not be used to parry or take any other action</li>
+      <li>Attacker must use a step movement to <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lie Down</a> or <a href="#PostureKneel"><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 />Kneel</a> to grapple an opponent who is <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Down</a>, <a href="#PostureKneel"><img src="images/gameaid/statuses/condition-kneel.webp" width=20 height=20 hspace=5 />Kneeling</a>, or <a href="#PostureSit"></a><img src="images/gameaid/statuses/condition-sit.webp" width=20 height=20 hspace=5 />Sitting, unless the opponent's size modifier is 2 or more larger than the attacker's size modifier</a> [BX370].</li>
+      <li>If targeting a specific part of the body, the apply <i>half</i> of the <a href="#TargetLocation">penalty from the table</a> in [BX552].  The normal penalties for being <a href="#Grappled"><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 />Grappled</a> will apply only to that part of the body.
+        <ul>
+          <li>Grapple a leg to trip</li>
+          <li>Grapple the neck to strangle</li>
+          <li>If a hand holding a weapon is grappled, then the attacker can force the defender to drop the weapon by winning a <a href="#RegularContest">Regular Contest</a> of ST [BX370].  One attempt may be made per turn.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Defender may defend normally using any defense.  If successful, the grapple fails.</li>
+  <li>Once a foe is grappled, the attacker may make the following on subsequent turns
+    <ul>
+      <li><b>Takedown</b> - Attempt to bear the combatant to the ground [BX370]
+        <ul>
+          <li>Can only be attempted against a combatant who is Standing</li>
+          <li>Roll a <a href="#QuickContest">Quick Contest</a>, with each combatant using the highest of DX, ST, or best grappling skill</li>
+          <li>If attacker is not standing, apply the normal <a href="#Postures">Posture</a> penalty</li>
+          <li>If attacker wins, 
+            <ul>
+              <li>if the defender was also grappling the attacker, then the attacker loses his grip</li>
+              <li>Otherwise, the defender falls to the ground (in winner's hex and any adjacent hex of the winner's choice)</li>
+            </ul>
+          </li>
+          <li>If the the defender wins, he suffers the same effects given for the attacker in the previous bullet</li>
+          <li>In a tie, nothing happens</li>
+        </ul>
+      </li>
+      <li><b>Pin</b>
+        <ul>
+          <li>Can only be attempted on a combatant whose torso is grappled and who is <a href="#PostureLyingProne"><img src="images/gameaid/statuses/path-condition-prone.webp" width=20 height=20 hspace=5 />Lying Prone</a></li>
+          <li>Roll a <a href="#RegularContest">Regular Contest</a> of ST
+            <ul>
+              <li>The larger combatant gets a +3 bonus for every point larger his size modifier is</li>
+              <li>The combatant with the most free hands also gets a +3 bonus</li>
+              <li>If the attacker wins, the defender is pinned and helpless, giving further penalties to break free from the <a href="#Grappled"><img src="images/gameaid/statuses/path-condition-grappled.webp" width=20 height=20 hspace=5 />Grappled</a> condition and giving further bonuses to the attacker, as detailed in this section.</li>
+              <li>If the attacker loses, or if there is a tie, nothing happens</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a name="Choke"><b>Choke / Strangle</b></a> [BX370]
+        <ul>
+          <li>Can only be attempted on a combatant whose neck is grappled</li>
+          <li>Roll a <a href="#QuickContest">Quick Contest</a> of attacker ST <i>vs.</i> the higher of defender's ST or HT
+            <ul>
+              <li>If attacker is using only 1 hand, apply penalty of -5</li>
+              <li>If attacker is using more than 2 hands, apply bonys of +2 per hand</li>
+              <li>If attacker's size modifier is larger than defender's, then attacker may grapple torso with penalty of -5 (unless attacker has constriction attack advantage [B43]).</li>
+            </ul>
+          </li>
+          <li>If attacker wins, apply <i>cr</i> damage equal to margin of victory (with normal DR protection)
+            <ul>
+              <li>Remember that <i>cr</i>damage to neck has wounding multiplier of 1.5 [BX399]</li>
+              <li>Any damage that penetrates DR begins to suffocate defender [BX436]</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><b>Choke Hold</b> [BX404]
+        <ul>
+          <li>Can only be attempted by combatants with Judo [B203] or Wrestling [B228] skill</li>
+          <li>Treat as a normal <a href="#Grapple">grappling attack roll</a>, but defender must be grappled from behind using both hands, rolling against Judo at -2 or Wrestling at -3.</li>
+          <li>On subsequent turns, defender loses 1 FP per turn from suffocation [BX436]</li>
+          <li>Attacker may optionally attempt to <a href="#Choke">choke</a> in the same turn with +3 ST in the Quick Contest</li>
+          <li>If the defender attempts to break free, attacker gets +5 in the Quick Contest (same as the grappling-with-two-hands bonus)</li>
+        </ul>
+      </li>
+      <li><b>Arm Lock</b> [BX403]
+        <ul>
+          <li>Can only be attempted by combatants with Judo [B203] or Wrestling [B228] skill</li>
+          <li>Can only be attempted if
+            <ul>
+              <li>in the previous turn, the attacker successfully parried a melee attack with both hands free against an attacker who is still only 1 yard away, or</li>
+              <li>the attacker has successfully grappled the defender's arm with two hands (and the defender has not broken free)</li>
+            </ul>
+          </li>
+          <li>If the defender fails to defend, his arm is locked.</li>
+          <li>Attacker is at +4 in the Quick Contest if the defender tried to break free.  If defender makes an unsuccessful attempt to break free, he has a cumulative -1 on future attempts.</li>
+          <li>Once the attacker has the defender in an arm lock, roll a <a href="#QuickContest">Quick Contest</a> to hurt the arm
+            <ul>
+              <li>Attacker rolls against highest of Judo skill, Wrestling skill, or ST</li>
+              <li>Defender rolls against the higher of ST or HT</li>
+              <li>Apply damage equal to margin of victory</li>
+              <li>DR from natural or rigid armor applies, but not flexible armor (<i>e.g.</i> cloth, chain mail)</li>
+              <li>This damage is considered passive.  Attacker is free to use other attacks on his turn with no penalties (provided that neither arm is needed for the attack)</li>
+              <li>If the defender takes HP/2 from this damage in a single turn, the limb is crippled [BX420] and can take no further damage.  Subsequent attempts to hurt the arm can still cause the defender to suffer <a href="#Shock"><img src="images/gameaid/statuses/condition-shock1.webp" width=20 height=20 hspace=5 />Shock</a> and <a href="#Stun"><img src="images/gameaid/statuses/dd-condition-stunned.webp" width=20 height=20 hspace=5 />Stun</a>, however.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><b>Neck Snap or Wrench Limb</b> [BX404]
+        <ul>
+          <li>Can be attempted after succesffully grappling the neck or a limb with both hands</li>
+          <li>If the defender fails to break free, roll a <a href=#QuickContest">Quick Contest</a>
+            <ul>
+              <li>Attacker rolls agains ST -4</li>
+              <li>Defender rolls agains higher of ST or HT</li>
+              <li>Apply damage equal to margin of victory</li>
+              <li>DR from natural or rigid armor applies, but not flexible armor (<i>e.g.</i> cloth, chain mail)</li>
+              <li>Remember that damage to neck has a wounding modifier of &times;1.5</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><b>Other Actions</b>
+        <ul>
+          <li>Grappler may make an <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a>, <a href="#AllOutAttack"><img src="images/gameaid/maneuvers/man-allout-attack.png" width=20 height=20 hspace=5 />All-Out Attack</a>, or <a href="#Ready"><img src="images/gameaid/maneuvers/man-ready.png" width=20 height=20 hspace=5 />Ready</a> maneuver with a hand not involved in the grappling, with an unarmed attack or weapon with reach "C".</li>
+          <li>Grappler may not <a href="#Aim"><img src="images/gameaid/maneuvers/man-aim.png" width=20 height=20 hspace=5 />Aim</a>, <a href="#Feint"><img src="images/gameaid/maneuvers/man-feint.png" width=20 height=20 hspace=5 />Feint</a>, <a href="#Concentrate"><img src="images/gameaid/maneuvers/man-concentrate.png" width=20 height=20 hspace=5 />Concentrate</a>, <a href="#Wait"><img src="images/gameaid/maneuvers/man-wait.png" width=20 height=20 hspace=5 />Wait</a>, or make a ranged <a href="#Attack"><img src="images/gameaid/maneuvers/man-attack.png" width=20 height=20 hspace=5 />Attack</a> unless the defender is pinned.
+          <li>The following may be taken as a free action</b>
+            <ul>
+              <li>Release grip, letting the grappled combatant go</li>
+              <li>Throw away a ready weapon, to prevent the grappled combatant from having a chance to grab it</li>
+              <li>Move or drag the combatant.  
+                <ul>
+                  <li>If the combatant is pinned, then he is moved (counts as encumberance)</li>
+                  <li>Otherwise, 
+                    <ul>
+                      <li>If attacker ST &ge; 2&times;ST of defender, then he is moved</li>
+                      <li>Otherwise, moving a step away counts as releasing the grip [BX371]</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<p class="style1"></p>
+
 <h3><a name="StrikeWeapon">Striking at Weapons</a></h3>
 <ul>
-  <li>First, state whether the intent is to <a href="Disarm">Disarm</a> or <a href="BreakWeapon">Break the Weapon</a> [BX400].</li>
-  <li>If <a href="Disarm">Disarming</a>
+  <li>First, state whether the intent is to <a href="#Disarm">Disarm</a> or <a href="#BreakWeapon">Break the Weapon</a> [BX400].</li>
+  <li>If <a href="#Disarm">Disarming</a>
     <ul>
       <li>Only a weapon that can parry may be used to disarm (<i>i.e.</i> only unarmed attacks, melee weapons, and some thrown weapons may be used to disarm) [BX401].  See the Parry column in the Melee Weapon Table [B271].</li>
       <li>Increase the attack penalty by -2, <i>unless</i> the weapon being used is a fencing weapon (<i>i.e.</i> main-gauche, jitte/sai, rapier, saber, or smallsword) [BX401]. Look for "F" in the Parry column of the Melee Weapon Table [B271].  Remember that main-gauche and jitte/sai are not weapons <i>per se</i> but rather skills that can be used with certian weapons [B208].</li>
@@ -607,7 +837,7 @@
 <h4><a name="Disarm">Disarming</a></h4>
 <ul>
   <li>Once successful attack has been made against a weapon <i>and</i> any defense has failed, the attacker may disarm [BX401]</li>
-  <li>To disarm, roll a Quick Contest [BX348] of weapon skills [BX401]. 
+  <li>To disarm, roll a <a href="#QuickContest">Quick Contest</a> of weapon skills [BX401]. 
     <ul>
       <li>In general, the attacker rolls against their skill with the weapon being used to disarm, and the defender rolls against their skill with the targeted weapon.</li>
       <li>If a missile weapon is targeted, roll against DX instead.</li>
